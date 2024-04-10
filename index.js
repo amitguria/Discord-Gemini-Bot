@@ -3,13 +3,12 @@ require('dotenv').config();
 
 const discord = require("discord.js");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-// const keep_alive = require("./keep_alive.js");
+const keep_alive = require("./keep_alive.js");
 
 //Few Constansts Values
 const MODEL = "gemini-pro";
-const apiKey = process.env.API_KEY ?? "";
-const botToken = process.env.BOT_TOKEN ?? "";
-const channelId = process.env.CHANNEL_ID ?? "";
+const apiKey = process.env.API_KEY ;
+const channelId = process.env.CHANNEL_ID ;
 
 //Intregrate with Gemini AI API
 const ai = new GoogleGenerativeAI(apiKey);
@@ -26,7 +25,7 @@ client.on("ready", () => {
 });
 
 //Login in discord bot
-client.login(botToken);
+client.login(process.env.BOT_TOKEN);
 
 //Create a messageCreate event
 client.on("messageCreate", async (message) => {
