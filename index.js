@@ -8,6 +8,7 @@ const keep_alive = require("./keep_alive.js");
 //Few Constansts Values
 const MODEL = "gemini-pro";
 const apiKey = process.env.API_KEY ;
+const botToken = process.env.BOT_TOKEN ;
 const channelId = process.env.CHANNEL_ID ;
 
 //Intregrate with Gemini AI API
@@ -25,7 +26,7 @@ client.on("ready", () => {
 });
 
 //Login in discord bot
-client.login(process.env.BOT_TOKEN);
+client.login(botToken);
 
 //Create a messageCreate event
 client.on("messageCreate", async (message) => {
