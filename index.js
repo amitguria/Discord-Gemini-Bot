@@ -6,12 +6,12 @@ const keep_alive = require("./keep_alive.js");
 
 //Few Constansts Values
 const MODEL = "gemini-pro";
-const API_KEY = process.env.API_KEY ?? "";
-const BOT_TOKEN = process.env.BOT_TOKEN ?? "";
-const CHANNEL_ID = process.env.CHANNEL_ID ?? "";
+const apiKey = process.env.API_KEY ?? "";
+const botToken = process.env.BOT_TOKEN ?? "";
+const channelId = process.env.CHANNEL_ID ?? "";
 
 //Intregrate with Gemini AI API
-const ai = new GoogleGenerativeAI(API_KEY);
+const ai = new GoogleGenerativeAI(apiKey);
 const model = ai.getGenerativeModel({ model: MODEL });
 
 //Create a new discord bot client instance
@@ -25,13 +25,13 @@ client.on("ready", () => {
 });
 
 //Login in discord bot
-client.login(BOT_TOKEN);
+client.login(botToken);
 
 //Create a messageCreate event
 client.on("messageCreate", async (message) => {
   try {
     if (message.author.bot) return;
-    if (message.channel.id !== CHANNEL_ID) return;
+    if (message.channel.id !== channelId) return;
 
     // Start typing effect
     await message.channel.sendTyping();
