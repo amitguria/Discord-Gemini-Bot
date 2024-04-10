@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const discord = require("discord.js");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const keep_alive = require("./keep_alive.js");
+// const keep_alive = require("./keep_alive.js");
 
 //Few Constansts Values
 const MODEL = "gemini-pro";
