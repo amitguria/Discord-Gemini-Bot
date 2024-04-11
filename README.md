@@ -2,10 +2,12 @@
 
 This is a Discord bot named Gemini built with Node.js and the Discord.js library. The bot utilizes Google Generative AI to generate responses and can be run using `node index.js`. To keep the bot online 24/7, you can use services like [UptimeRobot](https://uptimerobot.com/) or [Cron-job.org](https://cron-job.org/).
 
-## Features
+## Key Features
 
-- Responds with AI-generated messages in a specified Discord channel.
-- Named after the Gemini model of the Google Generative AI.
+- **AI-Generated Responses:** Utilizes Google Generative AI to provide dynamic and contextually relevant responses in Discord channels.
+- **Flexible Configuration:** Easily configurable via environment variables, allowing customization of Discord bot token, API key, and target channel ID.
+- **Intuitive Usage:** Simple setup process enables quick deployment and seamless integration with Discord servers.
+- **24/7 Availability:** Can be hosted on cloud platforms or using services like UptimeRobot to ensure the bot remains online round-the-clock.
 
 ## Getting Started
 
